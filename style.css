@@ -1,0 +1,50 @@
+:root {
+    --teal: #72959a;
+    --grey-blue: #b0bdc1;
+    --new-purple: #aa8bb1; /* Your requested sidebar color */
+}
+
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+
+.view-container { display: flex; height: 100vh; width: 100vw; background: var(--teal); }
+
+/* Home Sidebar remains the gradient for visual appeal */
+.sidebar { width: 320px; background: linear-gradient(45deg, var(--teal), var(--grey-blue)); color: white; padding: 25px; border-right: 1px solid rgba(255,255,255,0.3); }
+
+/* Web Page Sidebar updated to #aa8bb1 */
+.reader-sidebar { background: var(--new-purple) !important; }
+
+.scrollable { overflow-y: auto; }
+
+.manual h2 { text-decoration: underline; margin-bottom: 20px; }
+.instruction-step { margin-bottom: 15px; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; }
+
+.accordion {
+    background: rgba(0,0,0,0.1); color: white; cursor: pointer; padding: 15px; width: 100%;
+    border: none; text-align: left; font-size: 13pt; margin-top: 8px; border-radius: 4px; font-weight: bold;
+}
+
+.panel { padding: 10px; background: rgba(0,0,0,0.05); display: none; flex-direction: column; gap: 5px; }
+.panel button { background: white; border: none; color: var(--new-purple); padding: 8px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+
+.content-area { flex-grow: 1; display: flex; flex-direction: column; }
+.center { justify-content: center; align-items: center; }
+.cta-arrow { text-align: center; cursor: pointer; color: var(--grey-blue); transition: 0.3s; }
+.cta-arrow i { font-size: 120px; }
+.cta-arrow:hover { color: white; transform: scale(1.05); }
+
+.top-bar { display: flex; justify-content: space-around; padding: 15px; background: rgba(0,0,0,0.2); }
+.top-bar button { background: none; border: none; color: white; cursor: pointer; opacity: 0.7; }
+.top-bar button.active { opacity: 1; border-bottom: 2px solid white; }
+
+.workspace { flex-grow: 1; padding: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.input-bar { width: 100%; max-width: 800px; display: flex; gap: 10px; }
+.input-bar input { flex-grow: 1; padding: 12px; border-radius: 8px; border: none; font-size: 11pt; }
+
+#text-square {
+    width: 800px; height: 600px; background: var(--grey-blue); border: 3px solid white;
+    padding: 30px; overflow-y: auto; font-size: 20pt; line-height: 1.5; color: black; outline: none; border-radius: 12px;
+}
+
+.reset-btn { margin-top: 20px; padding: 10px; background: #ff6b6b; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; 
+}
